@@ -1,0 +1,54 @@
+$carousel-item-width: 304px;
+$carousel-side-margin: 20px;
+
+.carousel {
+  overflow: hidden;
+
+  display: flex;
+  flex-flow: row wrap-reverse;
+  justify-content: center;
+}
+
+.carousel__slider {
+  display: flex;
+
+  position: relative;
+  // left: 0;
+
+  transition: left 0.4s;
+}
+
+.carousel__item {
+  margin: 0 $carousel-side-margin;
+  width: $carousel-item-width;
+}
+
+.carousel__dot {
+  width: 8px;
+  height: 8px;
+
+  background: #DD3E18;
+
+  border-radius: 50%;
+
+  margin: 24px 12px 0 12px;
+
+  &:checked {
+    background: #000000;
+  }
+}
+
+@for $i from 2 through 4 {
+  .carousel_items_#{$i} {
+    $total-item-width: $carousel-item-width + $carousel-side-margin*2;
+    $total-width: $total-item-width * $i;
+
+    @for $j from 0 through $i - 1 {
+      .carousel__dot:checked {
+        &:nth-of-type(#{$j + 1}) ~ .carousel__slider {
+          left: ($total-width - $total-item-width) / 2 - $total-item-width * $j;
+        }
+      }
+    }
+  }
+}
