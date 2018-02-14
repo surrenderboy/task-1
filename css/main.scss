@@ -601,7 +601,7 @@ ul {
   }
 
   .footer {
-    height: 699px;
+    height: 795px;
 
     padding: 81px 0 50px 0;
 
@@ -622,5 +622,22 @@ ul {
       margin-bottom: 12px;
       display: block;
     }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .header {
+    height: 672px;
+
+    grid-template: 94px 282px 1fr / 552px 1fr;
+  }
+
+  .header__summary {
+    max-width: 544px;
+  }
+
+  .header__avatar {
+    background-size: 145%;
+    background-position-y: -140px;
   }
 }
