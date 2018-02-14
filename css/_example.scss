@@ -1,0 +1,92 @@
+.example {
+  display: flex;
+  flex-flow: column;
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    display: grid;
+
+    grid:
+      "title description" 37px
+      "link description" 1fr
+      "gallery gallery" 528px
+      / 1fr 384px;
+  }
+
+  @media only screen and (min-width: $small-desktop-breakpoint) {
+    grid:
+      "gallery title" 37px
+      "gallery link" 1fr
+      "gallery description" 147px
+      / 568px 1fr;
+
+    grid-column-gap: 72px;
+  }
+}
+
+.example__title {
+  font-family: Helvetica-Bold;
+  font-size: 24px;
+
+  margin-bottom: 8px;
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    grid-area: title;
+  }
+}
+
+.example__link {
+  line-height: 24px;
+
+  margin-bottom: 16px;
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    grid-area: link;
+  }
+}
+
+.example__description {
+  font-family: Georgia;
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 0.8;
+
+  margin-bottom: 16px;
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    grid-area: description;
+  }
+}
+
+.example__gallery {
+  @media only screen and (min-width: $tablet-breakpoint) {
+    grid-area: gallery;
+  }
+}
+
+.example__screenshot {
+  background-image: url('../img.png');
+  background-size: contain;
+
+  height: 216px;
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    height: 496px;
+  }
+
+  @media only screen and (min-width: $small-desktop-breakpoint) {
+    background-size: 544px 384px;
+    height: 384px;
+    width: 544px;
+  }
+}
+
+.example_align_right {
+  @media only screen and (min-width: $small-desktop-breakpoint) {
+    grid-template-areas:
+      "title gallery"
+      "link gallery"
+      "description gallery";
+
+    grid-template-columns: 1fr 568px;
+  }
+}

@@ -1,0 +1,28 @@
+.card-grid {
+  @media only screen and (min-width: $tablet-breakpoint) {
+    height: 448px;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-between;
+    align-content: space-between;
+  }
+}
+
+.card-grid__item {
+  @media only screen and (min-width: $tablet-breakpoint) {
+    width: 304px;
+    height: 216px;
+  }
+}
+
+.card-grid__item_large {
+  @media only screen and (min-width: $tablet-breakpoint) {
+    width: 384px;
+  }
+  
+  @media only screen and (min-width: $small-desktop-breakpoint) {
+    width: 624px;
+  }
+}

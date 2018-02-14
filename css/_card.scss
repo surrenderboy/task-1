@@ -1,0 +1,30 @@
+.card {
+  background-image: linear-gradient(-180deg, #E6F0F0 0%, #E9F0E6 100%);
+  border-radius: 4px;
+
+  padding: 25px 24px;
+
+  height: 304px;
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    display: flex;
+    flex-flow: column;
+
+    justify-content: space-between;
+
+    padding: 25px 32px;
+  }
+}
+
+.card__title {
+  font-family: Helvetica-Bold;
+  font-size: 24px;
+
+  margin-bottom: 24px;
+}
+
+.card__content {
+  font-family: Georgia;
+  font-size: 16px;
+  line-height: 24px;
+}

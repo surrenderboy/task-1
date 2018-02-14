@@ -1,0 +1,118 @@
+.footer {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+
+  height: 960px;
+
+  padding-top: 43px;
+  padding-bottom: 72px;
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    display: grid;
+
+    grid:
+      "title title" 69px
+      "summary link-list" 166px
+      "form form" 1fr
+      / 384px 1fr;
+
+    height: 819px;
+  }
+
+  @media only screen and (min-width: $small-desktop-breakpoint) {
+    height: 795px;
+
+    padding: 81px 0 50px 0;
+
+    grid:
+      "title title" 109px
+      "summary form" 1fr
+      "link-list form" 2fr
+      / 1fr 544px;
+
+    grid-column-gap: 96px;
+  }
+}
+
+.footer__title {
+  font-family: Helvetica-Bold;
+  font-size: 32px;
+  line-height: 40px;
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    grid-area: title;
+
+    font-size: 40px;
+    line-height: normal;
+  }
+}
+
+.footer__link-list {
+  list-style-type: none;
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    grid-area: link-list;
+
+    justify-self: center;
+  }
+
+  @media only screen and (min-width: $small-desktop-breakpoint) {
+    justify-self: flex-start;
+
+    &::before {
+      content: 'Ссылки на мои соцсети:';
+      margin-bottom: 12px;
+      display: block;
+    }
+  }
+}
+
+.footer__link-list-item {
+  margin-bottom: 12px;
+}
+
+.footer__link-list-item::before {
+  content: '';
+  display: inline-block;
+
+  vertical-align: middle;
+
+  margin-right: 12px;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: #000000;
+  opacity: 0.1;
+
+  border-radius: 2px;
+}
+
+.footer__link {
+  vertical-align: middle;
+  line-height: 20px;
+}
+
+.footer__summary {
+  font-family: Georgia;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    grid-area: summary;
+  }
+}
+
+.footer__form {
+  display: flex;
+  flex-flow: column;
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    grid-area: form;
+  }
+}
+
+.footer__form-input {
+  margin-bottom: 24px;
+}

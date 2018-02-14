@@ -1,0 +1,28 @@
+.content {
+  display: flex;
+  flex-flow: column;
+
+  padding-top: 72px;
+  padding-bottom: 24px;
+}
+
+.content__subcontent {
+  margin-top: 19px
+}
+
+.content__item {
+  margin-bottom: 64px;
+}
+
+.content__title {
+  font-family: Helvetica-Bold;
+  font-size: 32px;
+  line-height: 40px;
+
+  margin-bottom: 38px;
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    font-size: 40px;
+    line-height: normal;
+  }
+}

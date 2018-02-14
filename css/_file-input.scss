@@ -1,0 +1,55 @@
+.file-input {
+  display: flex;
+  align-items: center;
+
+  input { display: none; }
+
+  font-family: Helvetica-Bold;
+  font-size: 16px;
+  color: #DD3E18;
+  line-height: 20px;
+}
+
+.file-input__file-icon {
+  div {
+    height: 12px;
+    width: 100%;
+    background: #DD3E18;
+  }
+
+  margin-right: 11px;
+
+  padding-top: 8px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+
+  width: 16px;
+}
+
+.file-input__file-icon::before {
+  content: '';
+  position: absolute;
+
+  height: 8px;
+
+  width: 100%;
+  right: 8px;
+
+  top: 0px;
+
+  background: #DD3E18;
+}
+
+.file-input__file-icon::after {
+  content: '';
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  border-left: 8px solid rgb(152,22,44);
+  border-top: 8px solid transparent;
+
+  width: 0;
+}
