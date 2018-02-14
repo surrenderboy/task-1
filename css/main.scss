@@ -432,6 +432,11 @@ ul {
   }
 
   .card {
+    display: flex;
+    flex-flow: column;
+
+    justify-content: space-between;
+
     padding: 25px 32px;
   }
 
@@ -501,5 +506,121 @@ ul {
 
   .footer__form {
     grid-area: form;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .portfolio-grid__header-grid {
+    grid: "header" auto / auto;
+  }
+
+  .header {
+    height: 768px;
+
+    padding: 0;
+
+    display: grid;
+
+    grid:
+      "avatar title" 94px
+      "avatar name" 303px
+      "avatar summary" 1fr
+      / 424px 1fr;
+
+    grid-gap: 11px 96px;
+  }
+
+  .header__avatar {
+    grid-area: avatar;
+
+    border-radius: initial;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: 160%;
+    background-position-x: -67px;
+  }
+
+  .header__title {
+    grid-area: title;
+
+    text-align: left;
+    align-self: flex-end;
+  }
+
+  .header__name {
+    grid-area: name;
+    align-self: flex-start;
+  }
+
+  .header__summary {
+    grid-area: summary;
+
+    text-align: left;
+
+    max-width: 464px;
+    align-self: flex-start;
+  }
+
+  .portfolio-grid__content-grid {
+    grid-template-columns: 1fr 944px 1fr;
+  }
+
+  .card-grid__item_large {
+    width: 624px;
+  }
+
+  .example {
+    grid:
+      "gallery title" 37px
+      "gallery link" 1fr
+      "gallery description" 147px
+      / 568px 1fr;
+
+    grid-column-gap: 72px;
+  }
+
+  .example_align_right {
+    grid-template-areas:
+      "title gallery"
+      "link gallery"
+      "description gallery";
+
+    grid-template-columns: 1fr 568px;
+  }
+
+  .example__screenshot {
+    background-size: 544px 384px;
+    height: 384px;
+    width: 544px;
+  }
+
+  .portfolio-grid__footer-grid {
+    grid-template-columns: 1fr 944px 1fr;
+  }
+
+  .footer {
+    height: 699px;
+
+    padding: 81px 0 50px 0;
+
+    grid:
+      "title title" 109px
+      "summary form" 1fr
+      "link-list form" 2fr
+      / 1fr 544px;
+
+    grid-column-gap: 96px;
+  }
+
+  .footer__link-list {
+    justify-self: flex-start;
+
+    &::before {
+      content: 'Ссылки на мои соцсети:';
+      margin-bottom: 12px;
+      display: block;
+    }
   }
 }
