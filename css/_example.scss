@@ -12,7 +12,7 @@
       / 1fr 384px;
   }
 
-  @media only screen and (min-width: $small-desktop-breakpoint) {
+  @media only screen and (min-width: $large-tablet-breakpoint) {
     grid:
       "gallery title" 37px
       "gallery link" 1fr
@@ -24,9 +24,6 @@
 }
 
 .example__title {
-  font-family: Helvetica-Bold;
-  font-size: 24px;
-
   margin-bottom: 8px;
 
   @media only screen and (min-width: $tablet-breakpoint) {
@@ -45,9 +42,6 @@
 }
 
 .example__description {
-  font-family: Georgia;
-  font-size: 16px;
-  line-height: 24px;
   opacity: 0.8;
 
   margin-bottom: 16px;
@@ -65,23 +59,28 @@
 
 .example__screenshot {
   background-image: url('../img.png');
-  background-size: contain;
+  background-size: $mobile-default-width 216px;
 
+  width: $mobile-default-width;
   height: 216px;
 
   @media only screen and (min-width: $tablet-breakpoint) {
+    background-size: $tablet-default-width 496px;
+
+    width: $tablet-default-width;
     height: 496px;
   }
 
-  @media only screen and (min-width: $small-desktop-breakpoint) {
+  @media only screen and (min-width: $large-tablet-breakpoint) {
     background-size: 544px 384px;
-    height: 384px;
+
     width: 544px;
+    height: 384px;
   }
 }
 
-.example_align_right {
-  @media only screen and (min-width: $small-desktop-breakpoint) {
+.example_align-right {
+  @media only screen and (min-width: $large-tablet-breakpoint) {
     grid-template-areas:
       "title gallery"
       "link gallery"

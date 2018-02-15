@@ -1,3 +1,13 @@
 $tablet-breakpoint: 768px;
-$small-desktop-breakpoint: 1024px;
-$large-desktop-breakpoint: 1440px;
+$large-tablet-breakpoint: 1024px;
+$desktop-breakpoint: 1440px;
+
+$dark-blue: #082841;
+$red: #DD3E18;
+$light-cyan-gradient: linear-gradient(-180deg, #E6F0F0 0%, #E9F0E6 100%);
+
+$mobile-default-width: 304px;
+$tablet-narrow-width: 544px;
+$tablet-default-width: 704px;
+$large-tablet-default-width: 944px;
+$large-tablet-default-section-height: 384px;

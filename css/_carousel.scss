@@ -1,9 +1,8 @@
-$carousel-item-width: 304px;
 $carousel-side-margin: 20px;
 
-@mixin carousel_items($carousel-item-width) {
+@mixin carousel_num_($carousel-item-width) {
   @for $i from 2 through 4 {
-    .carousel_items_#{$i} {
+    &.carousel_num_#{$i} {
       $total-item-width: $carousel-item-width + $carousel-side-margin*2;
       $total-width: $total-item-width * $i;
 
@@ -18,9 +17,25 @@ $carousel-side-margin: 20px;
   }
 }
 
-@mixin carousel_items_vertical($carousel-item-height) {
+@mixin transition-top($carousel-item-height) {
+  flex-flow: column;
+
+  height: $carousel-item-height;
+
+  .carousel__slider {
+    flex-flow: column;
+    transition: top 0.4s;
+  }
+
+  .carousel__item {
+    flex-shrink: 0;
+
+    height: $carousel-item-height;
+    margin: $carousel-side-margin 0;
+  }
+
   @for $i from 2 through 4 {
-    .carousel_items_#{$i} {
+    &.carousel_num_#{$i} {
       @for $j from 0 through $i - 1 {
         .carousel__dot:checked {
           &:nth-of-type(#{$j + 1}) ~ .carousel__slider {
@@ -34,11 +49,17 @@ $carousel-side-margin: 20px;
 }
 
 .carousel {
-  overflow: hidden;
+  @include carousel_num_($mobile-default-width);
 
   display: flex;
   flex-flow: row wrap-reverse;
   justify-content: center;
+
+  overflow: hidden;
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    @include carousel_num_($tablet-default-width);
+  }
 }
 
 .carousel__slider {
@@ -51,77 +72,58 @@ $carousel-side-margin: 20px;
 
 .carousel__item {
   margin: 0 $carousel-side-margin;
-  width: $carousel-item-width;
+  width: $mobile-default-width;
+
+  cursor: pointer;
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    width: $tablet-default-width;
+  }
 }
 
 .carousel__dot {
   width: 8px;
   height: 8px;
 
-  background: #DD3E18;
+  background: $red;
 
   border-radius: 50%;
 
   margin: 24px 12px 0 12px;
 
-  &:checked {
-    background: #000000;
-  }
+  cursor: pointer;
+
+  &:checked { background: black; }
 }
 
-@include carousel_items($carousel-item-width);
-
-@media only screen and (min-width: 768px) {
-  $carousel-item-width: 704px;
-
-  .carousel__item {
-    width: $carousel-item-width;
-  }
-
-  @include carousel_items($carousel-item-width);
-
-  .carousel_disable_tablet {
-    .carousel__slider {
-      position: static;
-    }
-    .carousel__item {
-      margin: 0;
-    }
+.carousel_disable-tablet {
+  @media only screen and (min-width: $tablet-breakpoint) {
+    .carousel__slider { position: static; }
+    .carousel__item { margin: 0; }
     .carousel__dot { display: none; }
   }
 }
 
-@media only screen and (min-width: 1024px) {
-  $carousel-item-height: 384px;
+.carousel_style_large-tablet-right {
+  @media only screen and (min-width: $large-tablet-breakpoint) {
+    @include transition-top($large-tablet-default-section-height);
 
-  .carousel__slider {
-    flex-flow: column;
-    transition: top 0.4s;
-  }
-
-  .carousel__item {
-    flex-shrink: 0;
-    height: $carousel-item-height;
-    margin: $carousel-side-margin 0;
-  }
-
-  .carousel_dots_right {
-    height: $carousel-item-height;
-    flex-flow: column wrap-reverse;
+    flex-wrap: wrap-reverse;
 
     .carousel__dot {
-      margin: 16px 0 16px 16px;
+      margin: 8px 0 8px 16px;
     }
   }
+}
 
-  .carousel_dots_left {
-    height: $carousel-item-height;
-    flex-flow: column wrap;
+.carousel_style_large-tablet-left {
+  @media only screen and (min-width: $large-tablet-breakpoint) {
+    @include transition-top($large-tablet-default-section-height);
+
+    flex-wrap: wrap;
 
     .carousel__dot {
-      margin: 16px 16px 16px 0;
+      margin: 8px 16px 8px 0;
     }
   }
-
-  @include carousel_items_vertical($carousel-item-height);
 }

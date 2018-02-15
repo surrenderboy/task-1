@@ -7,97 +7,101 @@
 
     <link rel="stylesheet" href="dist/main.css">
   </head>
-  <body class="portfolio-grid">
-    <div class="portfolio-grid__header-grid">
-      <div class="header portfolio-grid__header">
-        <div class="header__title">Full-stack Ruby on Rails разработчик</div>
-        <div class="header__name">
+  <body>
+
+    <div class="header">
+      <div class="header__body">
+        <h2 class="heading header__title heading_sub">Full-stack Ruby on Rails разработчик</h2>
+        <h1 class="heading header__name">
           <span class="header__first-name">Илья</span>
           <span class="header__last-name">Демух</span>
-        </div>
+        </h1>
         <div class="header__avatar"></div>
-        <div class="header__summary">Рекламный макет подсознательно экономит JavaScript. Несмотря на сложности, ребрендинг Sass, LESS, PostCSS. Медиавес, конечно, стабилизирует экспериментальный традиционный Gulp, Webpack. Построение бренда специфицирует Python жизненный цикл продукции. К тому же каждая сфера рынка выражена наиболее полно. Медиабизнес искажает комплексный системный анализ.</div>
+        <p class="text header__summary">Рекламный макет подсознательно экономит JavaScript. Несмотря на сложности, ребрендинг Sass, LESS, PostCSS. Медиавес, конечно, стабилизирует экспериментальный традиционный Gulp, Webpack. Построение бренда специфицирует Python жизненный цикл продукции. К тому же каждая сфера рынка выражена наиболее полно. Медиабизнес искажает комплексный системный анализ.</p>
       </div>
     </div>
 
-    <div class="portfolio-grid__content-grid">
-      <div class="content portfolio-grid__content">
-        <div class="content__subcontent">
-          <div class="content__title">Ожидания от ШРИ</div>
-          <div class="carousel content__item carousel_disable_tablet carousel_items_4">
-            <input id="carousel1-1" type="radio" name="carousel1" class="carousel__dot" checked="checked">
-            <input id="carousel1-2" type="radio" name="carousel1" class="carousel__dot">
-            <input id="carousel1-3" type="radio" name="carousel1" class="carousel__dot">
-            <input id="carousel1-4" type="radio" name="carousel1" class="carousel__dot">
+    <div class="content">
+      <div class="content__body">
+        <div class="content__section">
+          <h1 class="heading content__title">Ожидания от ШРИ</h1>
+
+          <div class="carousel content__item carousel_disable-tablet carousel_num_4">
+            <input id="carousel-1-1" type="radio" name="carousel-1" class="carousel__dot" checked="checked">
+            <input id="carousel-1-2" type="radio" name="carousel-1" class="carousel__dot">
+            <input id="carousel-1-3" type="radio" name="carousel-1" class="carousel__dot">
+            <input id="carousel-1-4" type="radio" name="carousel-1" class="carousel__dot">
 
             <div class="card-grid carousel__slider">
-              <label class="card card-grid__item carousel__item card-grid__item_large" for="carousel1-2">
-                <div class="card__title">Свобода</div>
-                <div class="card__content">Разработка медиаплана, анализируя результаты рекламной кампании, нейтрализует эмпирический портрет потребителя.</div>
+              <label class="card card-grid__item carousel__item card-grid__item_large" for="carousel-1-2">
+                <h2 class="heading card__title heading_sub">Свобода</h2>
+                <p class="text card__content">Разработка медиаплана, анализируя результаты рекламной кампании, нейтрализует эмпирический портрет потребителя.</p>
               </label>
-              <label class="card card-grid__item carousel__item" for="carousel1-3">
-                <div class="card__title">Равенство</div>
-                <div class="card__content">Медиапланирование концентрирует пресс-клиппинг</div>
+              <label class="card card-grid__item carousel__item" for="carousel-1-3">
+                <h2 class="heading card__title heading_sub">Равенство</h2>
+                <p class="text card__content">Медиапланирование концентрирует пресс-клиппинг</p>
               </label>
-              <label class="card card-grid__item carousel__item" for="carousel1-4">
-                <div class="card__title">Братство</div>
-                <div class="card__content">Тем не менее, создание приверженного покупателя конструктивно</div>
+              <label class="card card-grid__item carousel__item" for="carousel-1-4">
+                <h2 class="heading card__title heading_sub">Братство</h2>
+                <p class="card__content">Тем не менее, создание приверженного покупателя конструктивно</p>
               </label>
-              <label class="card card-grid__item carousel__item card-grid__item_large" for="carousel1-1">
-                <div class="card__title">Трудоустройство</div>
-                <div class="card__content">Корпоративная культура без оглядки на авторитеты решительно отражает рекламоноситель.</div>
+              <label class="card card-grid__item carousel__item card-grid__item_large" for="carousel-1-1">
+                <h2 class="heading card__title heading_sub">Трудоустройство</h2>
+                <p class="card__content">Корпоративная культура без оглядки на авторитеты решительно отражает рекламоноситель.</p>
               </label>
             </div>
           </div>
         </div>
 
-        <div class="content__subcontent">
-          <div class="content__title">Мои работы</div>
+        <div class="content__section">
+          <h1 class="heading content__title">Мои работы</h1>
           <div class="example content__item">
-            <div class="example__title">Моды и шляпы</div>
+            <h2 class="heading example__title heading_sub">Моды и шляпы</h2>
             <a class="link example__link" href="lamoda.ru">lamoda.ru</a>
-            <div class="example__description">Межзвездная матеpия на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах (при эфоре Питии и афинском архонте Каллии), многопланово перечеркивает ионный хвост.</div>
-            <div class="carousel example__gallery carousel_items_3 carousel_dots_right">
-              <input id="carousel2-1" type="radio" name="carousel2" class="carousel__dot" checked="checked">
-              <input id="carousel2-2" type="radio" name="carousel2" class="carousel__dot">
-              <input id="carousel2-3" type="radio" name="carousel2" class="carousel__dot">
+            <p class="text example__description">Межзвездная матеpия на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах (при эфоре Питии и афинском архонте Каллии), многопланово перечеркивает ионный хвост.</p>
+            <div class="carousel example__gallery carousel_num_3 carousel_style_large-tablet-right">
+              <input id="carousel-2-1" type="radio" name="carousel-2" class="carousel__dot" checked="checked">
+              <input id="carousel-2-2" type="radio" name="carousel-2" class="carousel__dot">
+              <input id="carousel-2-3" type="radio" name="carousel-2" class="carousel__dot">
 
               <div class="carousel__slider">
-                <label class="carousel__item example__screenshot" for="carousel2-2"></label>
-                <label class="carousel__item example__screenshot" for="carousel2-3"></label>
-                <label class="carousel__item example__screenshot" for="carousel2-1"></label>
+                <label class="carousel__item example__screenshot" for="carousel-2-2"></label>
+                <label class="carousel__item example__screenshot" for="carousel-2-3"></label>
+                <label class="carousel__item example__screenshot" for="carousel-2-1"></label>
               </div>
             </div>
           </div>
-          <div class="example content__item example_align_right">
-            <div class="example__title">Моды и шляпы</div>
+
+          <div class="example content__item example_align-right">
+            <h2 class="heading example__title heading_sub">Моды и шляпы</h2>
             <a class="link example__link" href="lamoda.ru">lamoda.ru</a>
-            <div class="example__description">Межзвездная матеpия на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах (при эфоре Питии и афинском архонте Каллии), многопланово перечеркивает ионный хвост.</div>
-            <div class="carousel example__gallery carousel_items_4 carousel_dots_left">
-              <input id="carousel3-1" type="radio" name="carousel3" class="carousel__dot" checked="checked">
-              <input id="carousel3-2" type="radio" name="carousel3" class="carousel__dot">
-              <input id="carousel3-3" type="radio" name="carousel3" class="carousel__dot">
-              <input id="carousel3-4" type="radio" name="carousel3" class="carousel__dot">
+            <p class="text example__description">Межзвездная матеpия на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах (при эфоре Питии и афинском архонте Каллии), многопланово перечеркивает ионный хвост.</p>
+            <div class="carousel example__gallery carousel_num_4 carousel_style_large-tablet-left">
+              <input id="carousel-3-1" type="radio" name="carousel-3" class="carousel__dot" checked="checked">
+              <input id="carousel-3-2" type="radio" name="carousel-3" class="carousel__dot">
+              <input id="carousel-3-3" type="radio" name="carousel-3" class="carousel__dot">
+              <input id="carousel-3-4" type="radio" name="carousel-3" class="carousel__dot">
 
               <div class="carousel__slider">
-                <label class="carousel__item example__screenshot" for="carousel3-2"></label>
-                <label class="carousel__item example__screenshot" for="carousel3-3"></label>
-                <label class="carousel__item example__screenshot" for="carousel3-4"></label>
-                <label class="carousel__item example__screenshot" for="carousel3-1"></label>
+                <label class="carousel__item example__screenshot" for="carousel-3-2"></label>
+                <label class="carousel__item example__screenshot" for="carousel-3-3"></label>
+                <label class="carousel__item example__screenshot" for="carousel-3-4"></label>
+                <label class="carousel__item example__screenshot" for="carousel-3-1"></label>
               </div>
             </div>
           </div>
+
           <div class="example content__item">
-            <div class="example__title">Моды и шляпы</div>
+            <h2 class="heading example__title heading_sub">Моды и шляпы</h2>
             <a class="link example__link" href="lamoda.ru">lamoda.ru</a>
-            <div class="example__description">Межзвездная матеpия на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах (при эфоре Питии и афинском архонте Каллии), многопланово перечеркивает ионный хвост.</div>
-            <div class="carousel example__gallery carousel_items_2 carousel_dots_right">
-              <input id="carousel4-1" type="radio" name="carousel4" class="carousel__dot" checked="checked">
-              <input id="carousel4-2" type="radio" name="carousel4" class="carousel__dot">
+            <p class="text example__description">Межзвездная матеpия на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах (при эфоре Питии и афинском архонте Каллии), многопланово перечеркивает ионный хвост.</p>
+            <div class="carousel example__gallery carousel_num_2 carousel_style_large-tablet-right">
+              <input id="carousel-4-1" type="radio" name="carousel-4" class="carousel__dot" checked="checked">
+              <input id="carousel-4-2" type="radio" name="carousel-4" class="carousel__dot">
 
               <div class="carousel__slider">
-                <label class="carousel__item example__screenshot" for="carousel4-2"></label>
-                <label class="carousel__item example__screenshot" for="carousel4-1"></label>
+                <label class="carousel__item example__screenshot" for="carousel-4-2"></label>
+                <label class="carousel__item example__screenshot" for="carousel-4-1"></label>
               </div>
             </div>
           </div>
@@ -105,16 +109,26 @@
       </div>
     </div>
 
-    <div class="portfolio-grid__footer-grid">
-      <div class="footer portfolio-grid__footer">
-        <div class="footer__title">Контактная информация</div>
+    <div class="footer">
+      <div class="footer__body">
+        <h1 class="heading footer__title">Контактная информация</h1>
         <ul class="footer__link-list">
-          <li class="footer__link-list-item"> <a class="link footer__link" href="facebook.com">Facebook</a> </li>
-          <li class="footer__link-list-item"> <a class="link footer__link" href="vk.com">ВКонтакте</a> </li>
-          <li class="footer__link-list-item"> <a class="link footer__link" href="github.com">GitHub</a> </li>
-          <li class="footer__link-list-item"> <a class="link footer__link" href="twitter.com">Twitter</a> </li>
+          <li class="footer__link-list-item">
+            <a class="link footer__link" href="facebook.com">Facebook</a>
+          </li>
+          <li class="footer__link-list-item">
+            <a class="link footer__link" href="vk.com">ВКонтакте</a>
+          </li>
+          <li class="footer__link-list-item">
+            <a class="link footer__link" href="github.com">GitHub</a>
+          </li>
+          <li class="footer__link-list-item">
+            <a class="link footer__link" href="twitter.com">Twitter</a>
+          </li>
         </ul>
-        <div class="footer__summary">Я открыт для новых проектов. Вы можете прислать мне для оценки примерное техническое задание или просто описание проекта своими словами.</div>
+
+        <p class="text footer__summary">Я открыт для новых проектов. Вы можете прислать мне для оценки примерное техническое задание или просто описание проекта своими словами.</p>
+
         <form class="footer__form" onsubmit="return false;">
           <input class="input footer__form-input"type="text" name="name" placeholder="Имя">
           <input class="input footer__form-input"type="email" name="email" placeholder="Почтовый ящик">

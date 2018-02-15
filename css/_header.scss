@@ -1,80 +1,87 @@
 .header {
+  display: grid;
+  grid: ". body ." 648px / 1fr $mobile-default-width 1fr;
+
+  background: $dark-blue;
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    grid-template-rows: 1024px;
+    grid-template-columns: 1fr $tablet-narrow-width 1fr;
+  }
+
+  @media only screen and (min-width: $large-tablet-breakpoint) {
+    grid: "body" 768px / 1fr;
+  }
+
+  @media only screen and (min-width: $desktop-breakpoint) {
+    grid-template-rows: 672px;
+  }
+}
+
+.header__body {
+  grid-area: body;
+
+  padding-top: 33px;
+  padding-bottom: 42px;
+
   display: flex;
   flex-flow: column;
-
-  padding: 33px 0 42px 0;
-
   justify-content: space-between;
   align-items: center;
 
-  height: 648px;
+  text-align: center;
 
   @media only screen and (min-width: $tablet-breakpoint) {
     padding-top: 97px;
     padding-bottom: 145px;
-
-    height: 1024px;
   }
 
-  @media only screen and (min-width: $small-desktop-breakpoint) {
-    height: 768px;
-
+  @media only screen and (min-width: $large-tablet-breakpoint) {
     padding: 0;
 
     display: grid;
 
+    text-align: left;
+
     grid:
       "avatar title" 94px
-      "avatar name" 303px
-      "avatar summary" 1fr
+      "avatar name" 1fr
+      "avatar summary" 349px
       / 424px 1fr;
 
     grid-gap: 11px 96px;
   }
 
-  @media only screen and (min-width: $large-desktop-breakpoint) {
-    height: 672px;
-
-    grid-template: 94px 282px 1fr / 552px 1fr;
+  @media only screen and (min-width: $desktop-breakpoint) {
+    grid-template: 94px 1fr 285px / 552px 1fr;
   }
 }
 
 .header__title {
-  color: #FFFFFF;
-  font-family: Helvetica-Bold;
   font-size: 16px;
-  text-align: center;
+  color: white;
 
   @media only screen and (min-width: $tablet-breakpoint) {
     font-size: 24px;
   }
 
-  @media only screen and (min-width: $small-desktop-breakpoint) {
+  @media only screen and (min-width: $large-tablet-breakpoint) {
     grid-area: title;
-
-    text-align: left;
     align-self: flex-end;
   }
 }
 
 .header__name {
+  color: white;
+
   display: flex;
   flex-flow: column;
 
-  color: #FFFFFF;
-  font-family: Helvetica-Bold;
-  font-size: 32px;
-  line-height: 40px;
-  text-align: center;
-
   @media only screen and (min-width: $tablet-breakpoint) {
     flex-flow: row;
-
-    font-size: 40px;
-    line-height: normal;
   }
 
-  @media only screen and (min-width: $small-desktop-breakpoint) {
+  @media only screen and (min-width: $large-tablet-breakpoint) {
     grid-area: name;
     align-self: flex-start;
   }
@@ -87,38 +94,34 @@
 }
 
 .header__summary {
-  color: #FFFFFF;
-  font-family: Georgia;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
+  color: white;
 
   @media only screen and (min-width: $tablet-breakpoint) {
     font-size: 20px;
     line-height: 28px;
   }
 
-  @media only screen and (min-width: $small-desktop-breakpoint) {
+  @media only screen and (min-width: $large-tablet-breakpoint) {
     grid-area: summary;
-
-    text-align: left;
+    align-self: flex-start;
 
     max-width: 464px;
-    align-self: flex-start;
   }
 
-  @media only screen and (min-width: $large-desktop-breakpoint) {
+  @media only screen and (min-width: $desktop-breakpoint) {
     max-width: 544px;
   }
 }
 
 .header__avatar {
-  background-image: url('../monk.jpg');
-  background-position-y: -17px;
-  background-size: 120%;
-  border-radius: 50%;
   height: 144px;
   width: 144px;
+
+  border-radius: 50%;
+
+  background-image: url('../monk.jpg');
+  background-size: 120%;
+  background-position-y: -17px;
 
   @media only screen and (min-width: $tablet-breakpoint) {
     height: 384px;
@@ -127,7 +130,7 @@
     background-position-y: -67px;
   }
 
-  @media only screen and (min-width: $small-desktop-breakpoint) {
+  @media only screen and (min-width: $large-tablet-breakpoint) {
     grid-area: avatar;
 
     border-radius: initial;
@@ -139,7 +142,7 @@
     background-position-x: -67px;
   }
 
-  @media only screen and (min-width: $large-desktop-breakpoint) {
+  @media only screen and (min-width: $desktop-breakpoint) {
     background-size: 145%;
     background-position-y: -140px;
   }
