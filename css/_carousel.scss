@@ -74,8 +74,6 @@ $carousel-side-margin: 20px;
   margin: 0 $carousel-side-margin;
   width: $mobile-default-width;
 
-  cursor: pointer;
-
   @media only screen and (min-width: $tablet-breakpoint) {
     width: $tablet-default-width;
   }
@@ -90,8 +88,6 @@ $carousel-side-margin: 20px;
   border-radius: 50%;
 
   margin: 24px 12px 0 12px;
-
-  cursor: pointer;
 
   &:checked { background: black; }
 }

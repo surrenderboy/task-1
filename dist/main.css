@@ -6,7 +6,7 @@ html, body, h1, h2, p, ul {
   padding: 0;
   margin: 0; }
 
-input, textarea, button {
+input, textarea, button, label {
   -webkit-appearance: none;
   outline: none;
   border: none;
@@ -65,8 +65,7 @@ ul {
 
 .carousel__item {
   margin: 0 20px;
-  width: 304px;
-  cursor: pointer; }
+  width: 304px; }
   @media only screen and (min-width: 768px) {
     .carousel__item {
       width: 704px; } }
@@ -76,8 +75,7 @@ ul {
   height: 8px;
   background: #DD3E18;
   border-radius: 50%;
-  margin: 24px 12px 0 12px;
-  cursor: pointer; }
+  margin: 24px 12px 0 12px; }
   .carousel__dot:checked {
     background: black; }
 
@@ -278,7 +276,7 @@ ul {
   height: 144px;
   width: 144px;
   border-radius: 50%;
-  background-image: url("../monk.jpg");
+  background-image: url("../img/monk.jpg");
   background-size: 120%;
   background-position-y: -17px; }
   @media only screen and (min-width: 768px) {
@@ -335,10 +333,10 @@ ul {
   @media only screen and (min-width: 768px) {
     .example {
       display: grid;
-      grid: "title description" 37px "link description" 1fr "gallery gallery" 528px / 1fr 384px; } }
+      grid: "title description" auto "link description" 1fr "gallery gallery" 528px / 1fr 384px; } }
   @media only screen and (min-width: 1024px) {
     .example {
-      grid: "gallery title" 37px "gallery link" 1fr "gallery description" 147px / 568px 1fr;
+      grid: "gallery title" auto "gallery link" 1fr "gallery description" auto / 568px 1fr;
       grid-column-gap: 72px; } }
 
 .example__title {
@@ -366,7 +364,6 @@ ul {
     grid-area: gallery; } }
 
 .example__screenshot {
-  background-image: url("../img.png");
   background-size: 304px 216px;
   width: 304px;
   height: 216px; }
@@ -577,3 +574,55 @@ ul {
 @media only screen and (min-width: 1024px) {
   .card-grid__item_large {
     width: 624px; } }
+
+.bpd-1 {
+  background-size: cover;
+  background-image: url("../img/bpd-1.png"); }
+
+.bpd-2 {
+  background-size: cover;
+  background-image: url("../img/bpd-2.png"); }
+
+.bpd-3 {
+  background-size: cover;
+  background-image: url("../img/bpd-3.png"); }
+
+.dog-1 {
+  background-image: url("../img/dog-1.jpg");
+  background-size: 110%;
+  background-position: -30px; }
+  @media only screen and (min-width: 704px) {
+    .dog-1 {
+      background-position: -50px; } }
+
+.dog-2 {
+  background-image: url("../img/dog-2.jpg");
+  background-size: 110%;
+  background-position: -30px; }
+  @media only screen and (min-width: 704px) {
+    .dog-2 {
+      background-position: -50px; } }
+
+.dog-3 {
+  background-image: url("../img/dog-3.jpg");
+  background-size: 110%;
+  background-position: -15px; }
+  @media only screen and (min-width: 704px) {
+    .dog-3 {
+      background-position: -35px; } }
+
+.dog-4 {
+  background-image: url("../img/dog-4.jpg");
+  background-size: 100%;
+  background-position: 0 -75px; }
+  @media only screen and (min-width: 704px) {
+    .dog-4 {
+      background-position: 0 -130px; } }
+
+.city-1 {
+  background-size: cover;
+  background-image: url("../img/city-1.png"); }
+
+.city-2 {
+  background-size: cover;
+  background-image: url("../img/city-2.png"); }

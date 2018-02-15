@@ -6,7 +6,7 @@
     display: grid;
 
     grid:
-      "title description" 37px
+      "title description" auto
       "link description" 1fr
       "gallery gallery" 528px
       / 1fr 384px;
@@ -14,9 +14,9 @@
 
   @media only screen and (min-width: $large-tablet-breakpoint) {
     grid:
-      "gallery title" 37px
+      "gallery title" auto
       "gallery link" 1fr
-      "gallery description" 147px
+      "gallery description" auto
       / 568px 1fr;
 
     grid-column-gap: 72px;
@@ -58,7 +58,6 @@
 }
 
 .example__screenshot {
-  background-image: url('../img.png');
   background-size: $mobile-default-width 216px;
 
   width: $mobile-default-width;

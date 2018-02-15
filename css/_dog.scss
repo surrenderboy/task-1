@@ -1,0 +1,39 @@
+.dog-1 {
+  background-image: url('../img/dog-1.jpg');
+  background-size: 110%;
+  background-position: -30px;
+
+  @media only screen and (min-width: $tablet-default-width) {
+    background-position: -50px;
+  }
+}
+
+.dog-2 {
+  background-image: url('../img/dog-2.jpg');
+  background-size: 110%;
+  background-position: -30px;
+
+  @media only screen and (min-width: $tablet-default-width) {
+    background-position: -50px;
+  }
+}
+
+.dog-3 {
+  background-image: url('../img/dog-3.jpg');
+  background-size: 110%;
+  background-position: -15px;
+
+  @media only screen and (min-width: $tablet-default-width) {
+    background-position: -35px;
+  }
+}
+
+.dog-4 {
+  background-image: url('../img/dog-4.jpg');
+  background-size: 100%;
+  background-position: 0 -75px;
+
+  @media only screen and (min-width: $tablet-default-width) {
+    background-position: 0 -130px;
+  }
+}
